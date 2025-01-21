@@ -1,0 +1,94 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Package_Management",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Peach",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Package_Management",
+            "fused:name": "Package_Management",
+            "fused:id": null,
+            "fused:gitUrl": "https://github.com/fusedlabs/fusedudfs/tree/1ca4eb821070e7476fa6b09e57a584732ee47b3e/Package_Management/",
+            "fused:gitShortUrl": "https://github.com/fusedlabs/fusedudfs/tree/1ca4eb8/Package_Management/",
+            "fused:gitPath": "Package_Management",
+            "fused:gitRef": "1ca4eb821070e7476fa6b09e57a584732ee47b3e",
+            "fused:gitAuthorNames": [
+              "Sina Kashuk",
+              null
+            ],
+            "fused:gitAuthorUsernames": [
+              "kashuk",
+              "fused-io-staging[bot]"
+            ],
+            "fused:gitAuthorUrls": [
+              "https://github.com/kashuk",
+              "https://github.com/apps/fused-io-staging"
+            ],
+            "fused:gitAuthorAvatarUrls": [
+              "https://avatars.githubusercontent.com/u/12432685?v=4",
+              "https://avatars.githubusercontent.com/in/885821?v=4"
+            ],
+            "fused:gitLastModified": "2025-01-19T15:48:30+00:00",
+            "fused:gitRepo": "fusedlabs/fusedudfs",
+            "fused:gitPullRequestBranch": "sina_000002-patch-4bdecf-refactor-PackageManagemen",
+            "fused:gitPullRequestLink": "https://github.com/fusedlabs/fusedudfs/pull/434",
+            "fused:assetUrl": "https://miro.medium.com/v2/resize:fit:1160/format:webp/0*Kt5_0uGLlCFAgbt6.png",
+            "fused:description": "### Install a Package\n\nThis example shows how to install a Python package in Fused.\nTo use this package add this inside your UDF:\n\n```py\nimport sys;\nenv_name='testxenv';\nsys.path.append(f\"/mnt/cache/envs/{env_name}/lib/python3.13/site-packages\")\n```",
+            "fused:app:fromUrl": false
+          },
+          "source": "Package_Management.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
