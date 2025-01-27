@@ -56,10 +56,25 @@
             "fused:slug": "Bbox_Selection_Example",
             "fused:name": "Bbox_Selection_Example",
             "fused:id": null,
-            "fused:gitUrl": "https://github.com/fusedio/apps/tree/938b4922ac97277d08df50157fa364a8912040ea/public/Bbox_Selection_Example/",
-            "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/938b492/public/Bbox_Selection_Example/",
+            "fused:gitUrl": "https://github.com/fusedio/apps/tree/173b6e955add73b8ef10a224a99379924a2ccf11/public/Bbox_Selection_Example/",
+            "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/173b6e9/public/Bbox_Selection_Example/",
             "fused:gitPath": "public/Bbox_Selection_Example",
-            "fused:gitRef": "938b4922ac97277d08df50157fa364a8912040ea",
+            "fused:gitRef": "173b6e955add73b8ef10a224a99379924a2ccf11",
+            "fused:gitAuthorNames": [
+              "Sina Kashuk"
+            ],
+            "fused:gitAuthorUsernames": [
+              "kashuk"
+            ],
+            "fused:gitAuthorUrls": [
+              "https://github.com/kashuk"
+            ],
+            "fused:gitAuthorAvatarUrls": [
+              "https://avatars.githubusercontent.com/u/12432685?v=4"
+            ],
+            "fused:gitLastModified": "2025-01-27T14:14:39+00:00",
+            "fused:explorerTab": "public",
+            "fused:gitRepo": "fusedio/apps",
             "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Bbox_Selection_Example.png",
             "fused:tags": [
               {
@@ -77,24 +92,14 @@
               {
                 "id": "polygon",
                 "label": "polygon"
+              },
+              {
+                "id": "pydeck",
+                "label": "pydeck",
+                "isCreatable": true
               }
             ],
-            "fused:description": "## Overview\n\nThis app demonstrates how to pick a point using folium and show the chart for it in Fused App.\n",
-            "fused:gitAuthorNames": [
-              "Sina Kashuk"
-            ],
-            "fused:gitAuthorUsernames": [
-              "kashuk"
-            ],
-            "fused:gitAuthorUrls": [
-              "https://github.com/kashuk"
-            ],
-            "fused:gitAuthorAvatarUrls": [
-              "https://avatars.githubusercontent.com/u/12432685?v=4"
-            ],
-            "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
-            "fused:explorerTab": "public",
-            "fused:gitRepo": "fusedio/apps"
+            "fused:description": "## Overview\n\nThis app demonstrates how to pick a point using folium and show the chart for it in Fused App.\n"
           },
           "source": "Bbox_Selection_Example.py",
           "headers": []
