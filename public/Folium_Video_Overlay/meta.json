@@ -1,0 +1,95 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Folium_Video_Overlay",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Sunset",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Folium_Video_Overlay",
+            "fused:name": "Folium_Video_Overlay",
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Folium_Video_Overlay.png",
+            "fused:tags": [
+              {
+                "id": "folium",
+                "label": "folium",
+                "isCreatable": true
+              },
+              {
+                "id": "map",
+                "label": "map",
+                "isCreatable": true
+              },
+              {
+                "id": "video",
+                "label": "video",
+                "isCreatable": true
+              },
+              {
+                "id": "raster",
+                "label": "raster"
+              },
+              {
+                "id": "tile",
+                "label": "tile",
+                "isCreatable": true
+              }
+            ],
+            "fused:description": "## Overview\n\nThis app demonstrates how to overlay video using folium in Fused App.\n\n## External links\n\n- [NASA Webapp](https://python-visualization.github.io/folium/v0.15.1/user_guide/raster_layers/video_overlay.html)"
+          },
+          "source": "Folium_Video_Overlay.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}

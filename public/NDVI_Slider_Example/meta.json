@@ -1,0 +1,90 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "NDVI_Slider_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:description": "## Overview\n\nThis app showcases a Folium-based interactive slider for side-by-side comparison of geospatial layers, enabling dynamic exploration and analysis of overlaid maps.\n\n## External links\n\n- [Foluim Docs](https://python-visualization.github.io/folium/latest/getting_started.html)\n",
+            "fused:tags": [
+              {
+                "id": "folium",
+                "label": "folium",
+                "isCreatable": true
+              },
+              {
+                "id": "map",
+                "label": "map",
+                "isCreatable": true
+              },
+              {
+                "id": "slider",
+                "label": "slider",
+                "isCreatable": true
+              },
+              {
+                "id": "raster",
+                "label": "raster"
+              }
+            ],
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/NDVI_Slider_Example.png",
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Teal",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "NDVI_Slider_Example",
+            "fused:name": "NDVI_Slider_Example",
+            "fused:id": null
+          },
+          "source": "NDVI_Slider_Example.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Origin_Destination_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:description": "## Overview\n\nThis App showcases a Connections Among U.S. Airports Interactive example that can be created with Altair using Fused App.\n\n## External links\n\n- [Altair Reference](https://altair-viz.github.io/gallery/airport_connections.html)\n",
+            "fused:tags": [
+              {
+                "id": "altair",
+                "label": "altair",
+                "isCreatable": true
+              },
+              {
+                "id": "map",
+                "label": "map",
+                "isCreatable": true
+              },
+              {
+                "id": "pair",
+                "label": "pair",
+                "isCreatable": true
+              },
+              {
+                "id": "point",
+                "label": "point",
+                "isCreatable": true
+              }
+            ],
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Origin_Destination_Example.png",
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Teal",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Origin_Destination_Example",
+            "fused:name": "Origin_Destination_Example",
+            "fused:id": null
+          },
+          "source": "Origin_Destination_Example.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
