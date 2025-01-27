@@ -1,0 +1,96 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Seattle_Weather_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:description": "## Overview\n\nThis App showcases a seattle weather example that can be created with Altair using Fused App.\n\n## External links\n\n- [Altair Reference](https://altair-viz.github.io/gallery/seattle_weather_interactive.html)\n",
+            "fused:tags": [
+              {
+                "id": "altair",
+                "label": "altair",
+                "isCreatable": true
+              },
+              {
+                "id": "time",
+                "label": "time",
+                "isCreatable": true
+              },
+              {
+                "id": "histogram",
+                "label": "histogram",
+                "isCreatable": true
+              },
+              {
+                "id": "crossfilter",
+                "label": "crossfilter",
+                "isCreatable": true
+              },
+              {
+                "id": "scatter",
+                "label": "scatter",
+                "isCreatable": true
+              }
+            ],
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Seattle_Weather_Example.png",
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Teal",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Seattle_Weather_Example",
+            "fused:name": "Seattle_Weather_Example",
+            "fused:id": null
+          },
+          "source": "Seattle_Weather_Example.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
