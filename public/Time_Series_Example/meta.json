@@ -1,0 +1,101 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Time_Series_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Sunset",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Time_Series_Example",
+            "fused:name": "Time_Series_Example",
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Time_Series_Example.png",
+            "fused:tags": [
+              {
+                "id": "altair",
+                "label": "altair",
+                "isCreatable": true
+              },
+              {
+                "id": "pydeck",
+                "label": "pydeck",
+                "isCreatable": true
+              },
+              {
+                "id": "map",
+                "label": "map",
+                "isCreatable": true
+              },
+              {
+                "id": "line",
+                "label": "line",
+                "isCreatable": true
+              },
+              {
+                "id": "time",
+                "label": "time",
+                "isCreatable": true
+              },
+              {
+                "id": "crossfilter",
+                "label": "crossfilter",
+                "isCreatable": true
+              }
+            ],
+            "fused:description": "## Overview\n\nThis app demonstrates how you can use Streamlit to create interactive visualizations. It features DayMet dataset. Use the slider to adjust various parameters.\n\n## External links\n\n- [Daymet reference](https://daymet.ornl.gov/single-pixel)"
+          },
+          "source": "Time_Series_Example.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}

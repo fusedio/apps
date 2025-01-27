@@ -1,0 +1,86 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Folium_Bidirection_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:description": "## Overview\n\nThis app showcases a streamlit-folium that combines Streamlit and Folium to create map with bi-directional interactivity, allowing for both display and data transfer between the web app and Python.\n\n## External links\n\n- [Foluim Docs](https://python-visualization.github.io/folium/latest/getting_started.html)\n",
+            "fused:tags": [
+              {
+                "id": "folium",
+                "label": "folium",
+                "isCreatable": true
+              },
+              {
+                "id": "map",
+                "label": "map",
+                "isCreatable": true
+              },
+              {
+                "id": "crossfilter",
+                "label": "crossfilter",
+                "isCreatable": true
+              }
+            ],
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Folium_Bidirection_Example.png",
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Teal",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Folium_Bidirection_Example",
+            "fused:name": "Folium_Bidirection_Example",
+            "fused:id": null
+          },
+          "source": "Folium_Bidirection_Example.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}

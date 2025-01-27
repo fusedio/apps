@@ -1,0 +1,86 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Simulation_Pi_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Sunset",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Simulation_Pi_Example",
+            "fused:name": "Simulation_Pi_Example",
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Simulation_Pi_Example.png",
+            "fused:tags": [
+              {
+                "id": "plotly",
+                "label": "plotly",
+                "isCreatable": true
+              },
+              {
+                "id": "scatter",
+                "label": "scatter",
+                "isCreatable": true
+              },
+              {
+                "id": "fun",
+                "label": "fun",
+                "isCreatable": true
+              }
+            ],
+            "fused:description": "## Overview\n\nThis app demonstrates a Monte Carlo simulation that is estimating π.\n\n## External links\n\n- [Reference](https://github.com/mesmith027/streamlit_webapps/blob/main/MC_pi/streamlit_app.py)"
+          },
+          "source": "Simulation_Pi_Example.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}

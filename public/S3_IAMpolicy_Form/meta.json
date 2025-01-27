@@ -1,0 +1,81 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "S3_IAMpolicy_Form",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Sunset",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "S3_IAMpolicy_Form",
+            "fused:name": "S3_IAMpolicy_Form",
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/S3_IAMpolicy_Form.png",
+            "fused:tags": [
+              {
+                "id": "form",
+                "label": "form",
+                "isCreatable": true
+              },
+              {
+                "id": "udf",
+                "label": "udf",
+                "isCreatable": true
+              }
+            ],
+            "fused:description": "## Overview\n\nThis app showcases how to generated IAM policy for your s3 bucket using Fuesed App.\n\n## External links\n\n- [Fused Data Ingestion Doc](https://docs.fused.io/core-concepts/data_ingestion/ingestion-your-data/)"
+          },
+          "source": "S3_IAMpolicy_Form.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}

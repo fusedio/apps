@@ -1,0 +1,91 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Bbox_Selection_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Sunset",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Bbox_Selection_Example",
+            "fused:name": "Bbox_Selection_Example",
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Bbox_Selection_Example.png",
+            "fused:tags": [
+              {
+                "id": "folium",
+                "label": "folium",
+                "isCreatable": true
+              },
+              {
+                "id": "map",
+                "label": "map",
+                "isCreatable": true
+              },
+              {
+                "id": "crossfilter",
+                "label": "crossfilter",
+                "isCreatable": true
+              },
+              {
+                "id": "polygon",
+                "label": "polygon",
+                "isCreatable": true
+              }
+            ],
+            "fused:description": "## Overview\n\nThis app demonstrates how to pick a point using folium and show the chart for it in Fused App.\n"
+          },
+          "source": "Bbox_Selection_Example.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
