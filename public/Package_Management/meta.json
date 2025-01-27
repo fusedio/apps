@@ -56,10 +56,10 @@
             "fused:slug": "Package_Management",
             "fused:name": "Package_Management",
             "fused:id": null,
-            "fused:gitUrl": "https://github.com/fusedlabs/fusedudfs/tree/1ca4eb821070e7476fa6b09e57a584732ee47b3e/Package_Management/",
-            "fused:gitShortUrl": "https://github.com/fusedlabs/fusedudfs/tree/1ca4eb8/Package_Management/",
+            "fused:gitUrl": "https://github.com/fusedlabs/fusedudfs/tree/e75c5c950df56807e838d2e6b12fbc0ba95d20e3/Package_Management/",
+            "fused:gitShortUrl": "https://github.com/fusedlabs/fusedudfs/tree/e75c5c9/Package_Management/",
             "fused:gitPath": "Package_Management",
-            "fused:gitRef": "1ca4eb821070e7476fa6b09e57a584732ee47b3e",
+            "fused:gitRef": "e75c5c950df56807e838d2e6b12fbc0ba95d20e3",
             "fused:gitAuthorNames": [
               "Sina Kashuk",
               null
@@ -77,12 +77,24 @@
               "https://avatars.githubusercontent.com/in/885821?v=4"
             ],
             "fused:gitLastModified": "2025-01-19T15:48:30+00:00",
+            "fused:explorerTab": "team",
             "fused:gitRepo": "fusedlabs/fusedudfs",
             "fused:gitPullRequestBranch": "sina_000002-patch-4bdecf-refactor-PackageManagemen",
             "fused:gitPullRequestLink": "https://github.com/fusedlabs/fusedudfs/pull/434",
-            "fused:assetUrl": "https://miro.medium.com/v2/resize:fit:1160/format:webp/0*Kt5_0uGLlCFAgbt6.png",
-            "fused:description": "### Install a Package\n\nThis example shows how to install a Python package in Fused.\nTo use this package add this inside your UDF:\n\n```py\nimport sys;\nenv_name='testxenv';\nsys.path.append(f\"/mnt/cache/envs/{env_name}/lib/python3.13/site-packages\")\n```",
-            "fused:app:fromUrl": false
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Package_Management.png",
+            "fused:description": "### Install a Package\nThis example shows how to install a python package in Fused.\nTo use this package add this inside your udf:\n\nimport sys;\nenv_name='testxenv';\nsys.path.append(f\"/mnt/cache/envs/{env_name}/lib/python3.13/site-packages\")\n",
+            "fused:tags": [
+              {
+                "id": "udf",
+                "label": "udf",
+                "isCreatable": true
+              },
+              {
+                "id": "form",
+                "label": "form",
+                "isCreatable": true
+              }
+            ]
           },
           "source": "Package_Management.py",
           "headers": []
