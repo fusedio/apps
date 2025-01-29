@@ -1,0 +1,90 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Count_Airplanes",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:name": "Count_Airplanes",
+            "fused:slug": "Count_Airplanes",
+            "fused:gitRepo": "fusedlabs/fusedudfs",
+            "fused:gitRef": "1658a5ac8c85e3240a1c1a01945ba4d090b0a853",
+            "fused:gitUrl": "https://github.com/fusedlabs/fusedudfs/tree/1658a5ac8c85e3240a1c1a01945ba4d090b0a853/Count_Airplanes/",
+            "fused:gitShortUrl": "https://github.com/fusedlabs/fusedudfs/tree/1658a5a/Count_Airplanes/",
+            "fused:gitPath": "Count_Airplanes",
+            "fused:gitLastModified": "2025-01-28T13:23:04+00:00",
+            "fused:gitPullRequestBranch": "plinio-patch-625cdc-update-url-of-airplane-detecti",
+            "fused:gitPullRequestLink": "https://github.com/fusedlabs/fusedudfs/pull/531",
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "RedOr",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.us-west-2.amazonaws.com/thumbnails/udfs-staging/app_dl4eo.png",
+            "fused:description": "## Airplane Counter\n\nThis app counts airplanes in 5 airports, which come from predefined polygons.\n\nThe app runs the [UDF object detection across an AOI](https://www.fused.io/workbench/catalog/Airplane_Detection_AOI-71dc5cef-9fa7-42af-9e2b-d3c0f1320dbb) which in turn is calling the [UDF object detection inference (single tile)](https://www.fused.io/workbench/catalog/DL4EO_Airplane_Detection-d0d1cee6-f7fe-4f26-9a84-a7cb130d20cb).\n",
+            "fused:gitAuthorNames": [
+              null
+            ],
+            "fused:gitAuthorUsernames": [
+              "fused-io[bot]"
+            ],
+            "fused:gitAuthorUrls": [
+              "https://github.com/apps/fused-io"
+            ],
+            "fused:gitAuthorAvatarUrls": [
+              "https://avatars.githubusercontent.com/in/834700?v=4"
+            ],
+            "fused:explorerTab": "team"
+          },
+          "source": "Count_Airplanes.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
