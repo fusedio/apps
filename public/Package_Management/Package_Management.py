@@ -31,7 +31,7 @@ def list_folders(path="/mnt/cache/envs/"):
         return  pd.DataFrame({'error': ["Path does not exist"]})
 
 @fused.udf
-def pip_freeze(env='demo_env', mnt_path="/mnt/cache/envs/"):
+def pip_freeze(env='testxenv', mnt_path="/mnt/cache/envs/"):
     import pandas as pd
     utils = fused.load('https://github.com/fusedio/udfs/tree/d0f4a86/public/common/').utils
     r = utils.run_cmd(
@@ -41,14 +41,14 @@ def pip_freeze(env='demo_env', mnt_path="/mnt/cache/envs/"):
     return df
 
 @fused.udf
-def udf(name='numpy', env='demo_env', mnt_path="/mnt/cache/envs/", packages_path="/lib/python3.11/site-packages"):
+def udf(name='numpy', env='testxenv', mnt_path="/mnt/cache/envs/", packages_path="/lib/python3.11/site-packages"):
     import pandas as pd
     import loguru
     utils = fused.load('https://github.com/fusedio/udfs/tree/d0f4a86/public/common/').utils
     # install_module = utils.install_module
     def install_module(
         name,
-        env="demo_env",
+        env="testxenv",
         mnt_path="/mnt/cache/envs/",
         packages_path="/lib/python3.11/site-packages",
     ):
@@ -73,8 +73,8 @@ def udf(name='numpy', env='demo_env', mnt_path="/mnt/cache/envs/", packages_path
 if is_loggedin:
     # User Inputs
     name = st.text_input("Module Name", value="numpy")
-    env = st.text_input("Environment", value="demo_env")
-    mnt_path = st.text_input("Mount Path", value="/mnt/cache/envs/")     
+    env = st.text_input("Environment", value="testxenv")
+    mnt_path = st.text_input("Mount Path", value="/mount/envs/")     
     # with st.expander(f"See all Environment options in {mnt_path}", expanded=False):
     place_holder0 = st.empty()
     x =  place_holder0.button(f"Environments Details",on_click=click_button, args=['button2'])
@@ -120,7 +120,7 @@ if is_loggedin:
      
         st.code(f"""
             import sys;
-            sys.path.append(f"/mnt/cache/envs/{env}/lib/python3.11/site-packages")
+            sys.path.append(f"/mount/envs/{env}/lib/python3.11/site-packages/")
     """)
         st.session_state.button1=True
         
