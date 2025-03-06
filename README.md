@@ -1,2 +1,2 @@
 # apps
-Public Fused Apps.
+Public [Fused Apps](https://www.fused.io/workbench/apps).
