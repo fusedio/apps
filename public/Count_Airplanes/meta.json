@@ -15,11 +15,11 @@
             "fused:name": "Count_Airplanes",
             "fused:slug": "Count_Airplanes",
             "fused:gitRepo": "fusedio/apps",
-            "fused:gitRef": "6dc87dd7f5ec0f88916efaafa2e4e51ee01a2779",
-            "fused:gitUrl": "https://github.com/fusedio/apps/tree/6dc87dd7f5ec0f88916efaafa2e4e51ee01a2779/public/Count_Airplanes/",
-            "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/6dc87dd/public/Count_Airplanes/",
+            "fused:gitRef": "e8240bdd7357448624788b3ca19ffb98b32ac89a",
+            "fused:gitUrl": "https://github.com/fusedio/apps/tree/e8240bdd7357448624788b3ca19ffb98b32ac89a/public/Count_Airplanes/",
+            "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/e8240bd/public/Count_Airplanes/",
             "fused:gitPath": "public/Count_Airplanes",
-            "fused:gitLastModified": "2025-01-29T19:10:52.131Z",
+            "fused:gitLastModified": "2025-01-29T19:17:46+00:00",
             "fused:gitPullRequestBranch": "plinio-patch-4a10d7-Airplane-counter-app",
             "fused:gitPullRequestLink": "https://github.com/fusedio/apps/pull/11",
             "fused:vizConfig": {
@@ -64,21 +64,21 @@
             },
             "fused:udfType": "app",
             "fused:id": null,
-            "fused:assetUrl": "https://fused-magic.s3.us-west-2.amazonaws.com/thumbnails/udfs-staging/app_dl4eo.png",
-            "fused:description": "## Airplane Counter\n\nThis app counts airplanes in 5 airports, which come from predefined polygons.\n\nThe app runs the [UDF object detection across an AOI](https://www.fused.io/workbench/catalog/Airplane_Detection_AOI-71dc5cef-9fa7-42af-9e2b-d3c0f1320dbb) which in turn is calling the [UDF object detection inference (single tile)](https://www.fused.io/workbench/catalog/DL4EO_Airplane_Detection-d0d1cee6-f7fe-4f26-9a84-a7cb130d20cb).\n",
             "fused:gitAuthorNames": [
-              null
+              "Plinio Guzman"
             ],
             "fused:gitAuthorUsernames": [
-              "fused-io[bot]"
+              "pgzmnk"
             ],
             "fused:gitAuthorUrls": [
-              "https://github.com/apps/fused-io"
+              "https://github.com/pgzmnk"
             ],
             "fused:gitAuthorAvatarUrls": [
-              "https://avatars.githubusercontent.com/in/834700?v=4"
+              "https://avatars.githubusercontent.com/u/27398253?v=4"
             ],
-            "fused:explorerTab": "team"
+            "fused:explorerTab": "public",
+            "fused:assetUrl": "https://fused-magic.s3.us-west-2.amazonaws.com/thumbnails/udfs-staging/app_dl4eo.png",
+            "fused:description": "## Airplane Counter\n\nThis app counts airplanes in 5 airports, which come from predefined polygons.\n\nThe app runs the [UDF object detection across an AOI](https://www.fused.io/workbench/catalog/Airplane_Detection_AOI-71dc5cef-9fa7-42af-9e2b-d3c0f1320dbb) which in turn is calling the [UDF object detection inference (single tile)](https://www.fused.io/workbench/catalog/DL4EO_Airplane_Detection-d0d1cee6-f7fe-4f26-9a84-a7cb130d20cb).\n"
           },
           "source": "Count_Airplanes.py",
           "headers": []
