@@ -6,7 +6,6 @@ import folium
 import streamlit as st
 from streamlit_folium import st_folium
 import geopandas as gpd
-import fused_app
 import pandas as pd
 import duckdb
 from shapely.wkt import loads
@@ -28,7 +27,7 @@ def run_udf_async(row_array):
     outputs = []
     for row in row_array:
         row=gpd.GeoDataFrame.from_features([row])
-        out = asyncio.Task(fused_app.run("UDF_Airplane_Detection_AOI", target_gdf=row.to_json(), sync=False))
+        out = asyncio.Task(fused.run("UDF_Airplane_Detection_AOI", target_gdf=row.to_json(), sync=False))
         outputs.append((row.name.iloc[0], out))
     return outputs
 
@@ -56,7 +55,7 @@ col1.bar_chart(out, x='name', y='cnt', x_label='Airport', y_label='Count')
 # Count airplanes
 airport = col2.selectbox("Select airport", airports.name.values)
 row = airports[airports.name==airport].iloc[:1][['geometry', 'name']].to_json()
-airplanes = fused_app.run("UDF_Airplane_Detection_AOI", target_gdf=row)
+airplanes = fused.run("UDF_Airplane_Detection_AOI", target_gdf=row)
 airplanes.crs = "EPSG:4326"
 
 # Create map
