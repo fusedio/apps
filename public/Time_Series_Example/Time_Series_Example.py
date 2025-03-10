@@ -24,7 +24,6 @@ await micropip.install("xarray")
 await micropip.install("yarl") 
 import asyncio 
 import altair as alt
-import fused_app    
 import pandas as pd 
 
 def fn_draw_map(df_meta, draw_map):
@@ -75,7 +74,7 @@ fn_draw_map(df_meta, draw_map)
 def func(token, json_str_list, start_year, end_year):
     resutls = []
     for json_str in json_str_list:
-        out = asyncio.Task(fused_app.run(token, json_str=json_str, start_year=start_year, end_year=end_year, sync=False))
+        out = asyncio.Task(fused.run(token, json_str=json_str, start_year=start_year, end_year=end_year, sync=False))
         resutls.append(out)
     return resutls
 option = st.selectbox('Select a parameter to visualize', options)
