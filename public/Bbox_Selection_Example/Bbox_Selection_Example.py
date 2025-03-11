@@ -17,7 +17,7 @@ def get_data(gdf, overture_type='building', max_area=9):
         area=10**4*(bbox[2]-bbox[0])*(bbox[3]-bbox[1])
         if area<max_area:
             st.success(f'Selected area is smaller than max_area: {round(area,2)}<{max_area}')
-            gdf = fused.run('UDF_Overture_Maps_Example', min_zoom=1, bbox=bbox, overture_type=overture_type) 
+            gdf = fused.run('UDF_Overture_Maps_Example', min_zoom=1, bounds=bbox, overture_type=overture_type)
             # st.write(f'{len(gdf)=}')
             # st.write(gdf)
             return gdf
