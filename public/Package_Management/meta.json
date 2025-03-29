@@ -55,46 +55,44 @@
             "fused:udfType": "app",
             "fused:slug": "Package_Management",
             "fused:name": "Package_Management",
-            "fused:id": null,
-            "fused:gitUrl": "https://github.com/fusedlabs/fusedudfs/tree/e75c5c950df56807e838d2e6b12fbc0ba95d20e3/Package_Management/",
-            "fused:gitShortUrl": "https://github.com/fusedlabs/fusedudfs/tree/e75c5c9/Package_Management/",
-            "fused:gitPath": "Package_Management",
-            "fused:gitRef": "e75c5c950df56807e838d2e6b12fbc0ba95d20e3",
+            "fused:gitUrl": "https://github.com/fusedio/apps/tree/e8240bdd7357448624788b3ca19ffb98b32ac89a/public/Package_Management/",
+            "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/e8240bd/public/Package_Management/",
+            "fused:gitPath": "public/Package_Management",
+            "fused:gitRef": "e8240bdd7357448624788b3ca19ffb98b32ac89a",
             "fused:gitAuthorNames": [
-              "Sina Kashuk",
-              null
+              "Isaac Brodsky",
+              "Sina Kashuk"
             ],
             "fused:gitAuthorUsernames": [
-              "kashuk",
-              "fused-io-staging[bot]"
+              "isaacbrodsky",
+              "kashuk"
             ],
             "fused:gitAuthorUrls": [
-              "https://github.com/kashuk",
-              "https://github.com/apps/fused-io-staging"
+              "https://github.com/isaacbrodsky",
+              "https://github.com/kashuk"
             ],
             "fused:gitAuthorAvatarUrls": [
-              "https://avatars.githubusercontent.com/u/12432685?v=4",
-              "https://avatars.githubusercontent.com/in/885821?v=4"
+              "https://avatars.githubusercontent.com/u/9139378?v=4",
+              "https://avatars.githubusercontent.com/u/12432685?v=4"
             ],
-            "fused:gitLastModified": "2025-01-19T15:48:30+00:00",
-            "fused:explorerTab": "team",
-            "fused:gitRepo": "fusedlabs/fusedudfs",
+            "fused:gitLastModified": "2025-01-27T00:06:39+00:00",
+            "fused:explorerTab": "public",
+            "fused:gitRepo": "fusedio/apps",
             "fused:gitPullRequestBranch": "sina_000002-patch-4bdecf-refactor-PackageManagemen",
             "fused:gitPullRequestLink": "https://github.com/fusedlabs/fusedudfs/pull/434",
             "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Package_Management.png",
-            "fused:description": "### Install a Package\nThis example shows how to install a python package in Fused.\nTo use this package add this inside your udf:\n\nimport sys;\nenv_name='testxenv';\nsys.path.append(f\"/mnt/cache/envs/{env_name}/lib/python3.13/site-packages\")\n",
             "fused:tags": [
               {
                 "id": "udf",
-                "label": "udf",
-                "isCreatable": true
+                "label": "udf"
               },
               {
                 "id": "form",
-                "label": "form",
-                "isCreatable": true
+                "label": "form"
               }
-            ]
+            ],
+            "fused:description": "### Install a Package\nThis example shows how to install a python package in Fused.\nTo use this package add this inside your udf:\n\nimport sys;\nenv_name='testxenv';\nsys.path.append(f\"/mnt/cache/envs/{env_name}/lib/python3.13/site-packages\")\n",
+            "fused:id": null
           },
           "source": "Package_Management.py",
           "headers": []
