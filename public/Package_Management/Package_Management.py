@@ -16,6 +16,8 @@ if 'button2' not in st.session_state:
     st.session_state.button2 = True
 if 'expanded' not in st.session_state:
     st.session_state.expanded = True
+if 'install_type' not in st.session_state:
+    st.session_state.install_type = 'package'
 
 def click_button(button_arg):
     st.session_state[button_arg] = False
@@ -41,7 +43,7 @@ def pip_freeze(env='demo_env', mnt_path="/mnt/cache/envs/"):
     return df
 
 @fused.udf
-def udf(name='numpy', env='demo_env', mnt_path="/mnt/cache/envs/", packages_path="/lib/python3.11/site-packages"):
+def udf(name='numpy', env='demo_env', mnt_path="/mnt/cache/envs/", packages_path="/lib/python3.11/site-packages", whl_path=''):
     import pandas as pd
     import loguru
     utils = fused.load('https://github.com/fusedio/udfs/tree/d0f4a86/public/common/').utils
@@ -51,6 +53,7 @@ def udf(name='numpy', env='demo_env', mnt_path="/mnt/cache/envs/", packages_path
         env="demo_env",
         mnt_path="/mnt/cache/envs/",
         packages_path="/lib/python3.11/site-packages",
+        whl_path='',
     ):
         import os
         import sys
@@ -58,11 +61,18 @@ def udf(name='numpy', env='demo_env', mnt_path="/mnt/cache/envs/", packages_path
         sys.path.append(path)
         if not os.path.exists(path):
             utils.run_cmd(f"python3.11 -m venv  {mnt_path}{env}", communicate=True)
-        return utils.run_cmd(
-            f"{mnt_path}{env}/bin/python -m pip install {name}", communicate=True
-        )
+        
+        # Check if we're installing from a wheel file
+        if whl_path:
+            return utils.run_cmd(
+                f"{mnt_path}{env}/bin/python -m pip install {whl_path}", communicate=True
+            )
+        else:
+            return utils.run_cmd(
+                f"{mnt_path}{env}/bin/python -m pip install {name}", communicate=True
+            )
     
-    r = install_module(name=name, env=env, mnt_path=mnt_path)
+    r = install_module(name=name, env=env, mnt_path=mnt_path, whl_path=whl_path)
     loguru.logger.info(r)
     # print(r) 
     df = pd.DataFrame({'status': [str(i.decode('utf-8')) for i in r]})
@@ -71,10 +81,19 @@ def udf(name='numpy', env='demo_env', mnt_path="/mnt/cache/envs/", packages_path
 
 
 if is_loggedin:
+    # Installation type selector
+    st.session_state.install_type = st.radio("Installation Method", ['Package Name', 'Wheel File (.whl)'])
+    
     # User Inputs
-    name = st.text_input("Module Name", value="numpy")
+    if st.session_state.install_type == 'Package Name':
+        name = st.text_input("Module Name", value="numpy")
+        whl_path = ''
+    else:
+        name = ''
+        whl_path = st.text_input("Wheel File Path", value="/mount/tmp/package_name.whl", help='Please upload your file to `/mount/tmp/` using [File Explorer](https://docs.fused.io/workbench/file-explorer/).')
+    
     env = st.text_input("Environment", value="demo_env")
-    mnt_path = st.text_input("Mount Path", value="/mnt/cache/envs/")     
+    mnt_path = st.text_input("Mount Path", value="/mount/envs/")     
     # with st.expander(f"See all Environment options in {mnt_path}", expanded=False):
     place_holder0 = st.empty()
     x =  place_holder0.button(f"Environments Details",on_click=click_button, args=['button2'])
@@ -93,21 +112,28 @@ if is_loggedin:
                 success =st.warning(f'{mnt_path}{env} is empty or not accessable.')
     # mode = st.radio("Execution Mode", ('Real-time', 'Batch'))
     place_holder = st.empty()
-    place_holder.button('Submit', on_click=click_button, disabled= not st.session_state.button1, args=['button1'])
+    
+    # Validate input before enabling submit button
+    input_valid = (st.session_state.install_type == 'Package Name' and name) or \
+                  (st.session_state.install_type == 'Wheel File (.whl)' and whl_path)
+    
+    place_holder.button('Submit', on_click=click_button, disabled= not st.session_state.button1 or not input_valid, args=['button1'])
     if not st.session_state.button1:
         st.session_state.button1=True
         mode='Batch'
         if mode == 'Batch': 
-            with place_holder.status(f"Install {name}", expanded=True):
+            install_target = name if st.session_state.install_type == 'Package Name' else whl_path
+            target_display = name if st.session_state.install_type == 'Package Name' else whl_path.split('/')[-1]
+            with place_holder.status(f"Install {target_display}", expanded=True):
                 time.sleep(0.01) 
-                result = udf(name=name, env=env, mnt_path=mnt_path).run_remote()
+                result = udf(name=name, env=env, mnt_path=mnt_path, whl_path=whl_path).run_remote()
                 st.session_state.button1=True
                 job_url = fused.options.base_url.replace('server/v1',f'job_status/{result.job_id}')
                 st.markdown(f"[job_status]({job_url})") 
         else:
-            with place_holder.status(f"Install {name} (realtime)", expanded=True):
+            with place_holder.status(f"Install {name or whl_path.split('/')[-1]} (realtime)", expanded=True):
                 time.sleep(0.01)  
-                result = fused.run(udf(name=name, env=env, mnt_path=mnt_path, cache_id=cache_id))   
+                result = fused.run(udf(name=name, env=env, mnt_path=mnt_path, whl_path=whl_path, cache_id=cache_id))   
                 st.session_state.button1=True
                 success = result.values[0][0]
                 error = result.values[1][0]
@@ -120,7 +146,6 @@ if is_loggedin:
      
         st.code(f"""
             import sys;
-            sys.path.append(f"/mnt/cache/envs/{env}/lib/python3.11/site-packages")
+            sys.path.append(f"/mount/envs/{env}/lib/python3.11/site-packages/")
     """)
         st.session_state.button1=True
-        
