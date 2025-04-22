@@ -23,7 +23,7 @@ def click_button(button_arg):
     st.session_state[button_arg] = False
     
 @fused.udf 
-def list_folders(path="/mnt/cache/envs/"):
+def list_folders(path="/mnt/cache/envs/" , cache_id=None):
     import os
     import pandas as pd
     if os.path.exists(path):
