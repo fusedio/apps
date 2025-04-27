@@ -154,13 +154,14 @@ selected_crop_id = list(cdl_categories.keys())[list(cdl_categories.values()).ind
 
 min_ratio_in_hex = st.slider("min_ratio_in_hex", min_value=0.0, max_value=1.0, value=0.0, step=0.05)
 
-path_for_data = f's3://fused-users/fused/sina/_del3h11_file_idf3_v3/year={selected_year}/'
+path_for_data = f's3://fused-users/fused/sina/_del3h11_file_idf3_v3/year={selected_year}/*'
 
 hex_df = fused.run(
     "viz_hex_file_one_udf_call",
     crop_value_list = [selected_crop_id],
     cell_to_parent_res = 6,
     min_ratio = min_ratio_in_hex,
+    path=path_for_data,
 )
 # Casting to hex type 
 hex_df['hex']=hex_df['hex'].map(lambda x:hex(x)[2:])

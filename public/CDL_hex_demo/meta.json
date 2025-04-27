@@ -71,7 +71,91 @@
                 "label": "h3"
               }
             ],
-            "fused:description": "## Overview\n\nThis app demonstrates how call the \"Hexify Image\" UDF by Jennings Anderson. The H3 resolution and URL of your image are passed as input parameters to the UDF.\n## External links\n\n- [Hexify Image UDF](https://www.fused.io/workbench/catalog/Hexify_Image-b817f7fd-cd52-40d3-a601-d0fcc36d0f86)\n"
+            "fused:description": "## Overview\n\nThis app demonstrates how call the \"Hexify Image\" UDF by Jennings Anderson. The H3 resolution and URL of your image are passed as input parameters to the UDF.\n## External links\n\n- [Hexify Image UDF](https://www.fused.io/workbench/catalog/Hexify_Image-b817f7fd-cd52-40d3-a601-d0fcc36d0f86)\n",
+            "fused:gitHistory": [
+              {
+                "fused:vizConfig": {
+                  "tileLayer": {
+                    "@@type": "TileLayer",
+                    "minZoom": 0,
+                    "maxZoom": 19,
+                    "tileSize": 256
+                  },
+                  "rasterLayer": {
+                    "@@type": "BitmapLayer",
+                    "pickable": true
+                  },
+                  "vectorLayer": {
+                    "@@type": "GeoJsonLayer",
+                    "stroked": true,
+                    "filled": false,
+                    "pickable": true,
+                    "lineWidthMinPixels": 1,
+                    "pointRadiusMinPixels": 1,
+                    "getLineColor": {
+                      "@@function": "colorContinuous",
+                      "attr": "value",
+                      "domain": [
+                        0,
+                        10
+                      ],
+                      "colors": "Sunset",
+                      "nullColor": [
+                        184,
+                        184,
+                        184
+                      ]
+                    },
+                    "getFillColor": [
+                      208,
+                      208,
+                      208,
+                      40
+                    ]
+                  }
+                },
+                "fused:udfType": "app",
+                "fused:slug": "Hexify_Image_Example",
+                "fused:name": "Hexify_Image_Example",
+                "fused:id": null,
+                "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Hexify_Image_Example/",
+                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Hexify_Image_Example/",
+                "fused:gitPath": "public/Hexify_Image_Example",
+                "fused:gitRef": "58b68a77a3bff1e5afb2614734d2de85680120aa",
+                "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
+                "fused:tags": [
+                  {
+                    "id": "pydeck",
+                    "label": "pydeck"
+                  },
+                  {
+                    "id": "map",
+                    "label": "map"
+                  },
+                  {
+                    "id": "h3",
+                    "label": "h3"
+                  }
+                ],
+                "fused:description": "## Overview\n\nThis app demonstrates how call the \"Hexify Image\" UDF by Jennings Anderson. The H3 resolution and URL of your image are passed as input parameters to the UDF.\n## External links\n\n- [Hexify Image UDF](https://www.fused.io/workbench/catalog/Hexify_Image-b817f7fd-cd52-40d3-a601-d0fcc36d0f86)\n",
+                "fused:gitAuthorNames": [
+                  "Sina Kashuk"
+                ],
+                "fused:gitAuthorUsernames": [
+                  "kashuk"
+                ],
+                "fused:gitAuthorUrls": [
+                  "https://github.com/kashuk"
+                ],
+                "fused:gitAuthorAvatarUrls": [
+                  "https://avatars.githubusercontent.com/u/12432685?v=4"
+                ],
+                "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
+                "fused:explorerTab": "public",
+                "fused:gitRepo": "fusedio/apps",
+                "fused:sharedToken": "UDF_Hexify_Image_Example"
+              }
+            ]
           },
           "source": "CDL_hex_demo.py",
           "headers": []
