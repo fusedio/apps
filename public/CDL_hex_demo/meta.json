@@ -1,0 +1,83 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "CDL_hex_demo",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Sunset",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "CDL_hex_demo",
+            "fused:name": "CDL_hex_demo",
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
+            "fused:tags": [
+              {
+                "id": "pydeck",
+                "label": "pydeck"
+              },
+              {
+                "id": "map",
+                "label": "map"
+              },
+              {
+                "id": "h3",
+                "label": "h3"
+              }
+            ],
+            "fused:description": "## Overview\n\nThis app demonstrates how call the \"Hexify Image\" UDF by Jennings Anderson. The H3 resolution and URL of your image are passed as input parameters to the UDF.\n## External links\n\n- [Hexify Image UDF](https://www.fused.io/workbench/catalog/Hexify_Image-b817f7fd-cd52-40d3-a601-d0fcc36d0f86)\n"
+          },
+          "source": "CDL_hex_demo.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
