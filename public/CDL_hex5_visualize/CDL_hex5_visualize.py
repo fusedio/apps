@@ -166,7 +166,7 @@ view_state = pdk.ViewState(
 )
 
 hex_df = fused.run(
-    "Hex5_visualize_CDL_crop", # Using a public UDF to get data from
+    "UDF_Hex5_visualize_CDL_crop", # Using a public UDF to get data from
     vals=[selected_crop_id],
     year=2024, # Only 2024 is supported for now
 )
