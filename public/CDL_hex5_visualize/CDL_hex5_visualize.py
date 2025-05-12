@@ -4,6 +4,11 @@ import fused
 import micropip
 
 st.title("2024 Crop Data Layer Hex Explorer!")
+st.write(
+    """
+    Visualize any crop from the USDA's 2024 Crop Data Layer dataset.
+    Data taken from the Fused-partitioned dataset hosted on [Source Coop](https://source.coop/repositories/fused/hex/description).
+    """)
 
 await micropip.install(['pydeck', 'plotly'])
 import pydeck as pdk
