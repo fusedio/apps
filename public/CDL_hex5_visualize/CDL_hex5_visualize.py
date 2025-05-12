@@ -161,12 +161,15 @@ view_state = pdk.ViewState(
 )
 
 hex_df = fused.run(
-    "fsh_a497F1dUqxXEqtswi0Kka", 
+    "Hex5_visualize_CDL_crop", # Using a public UDF to get data from
     vals=[selected_crop_id],
     year=2024, # Only 2024 is supported for now
 )
 # Casting to hex type 
 hex_df['hex']=hex_df['hex'].map(lambda x:hex(x)[2:])
+
+# Filtering out any values below selected ratio
+hex_df = hex_df[hex_df['pct'] > min_ratio_in_hex*100]
 
 # Dynamic colors
 min_val = hex_df['area'].min()
@@ -197,8 +200,11 @@ layer = pdk.Layer(
     get_fill_color="color"
 )
 
+# Round the pct column to 2 decimal for tooltip vis
+hex_df['pct'] = hex_df['pct'].round(2)
+
 tooltip = {
-    "html": "<b>H3 Index:</b> {hex}<br><b>Value:</b> {data}<br><b>area:</b> {cnt}<br><b>Percentage:</b> {pct}%",
+    "html": "<b>H3 Index:</b> {hex}<br><b>Value:</b> {data}<br><b>area:</b> {area}<br><b>Percentage:</b> {pct}%",
     "style": {
         "backgroundColor": "white",
         "color": "black",
