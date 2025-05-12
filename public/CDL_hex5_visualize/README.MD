@@ -1,5 +1,5 @@
 <!--fused:preview-->
-<p align="center"><img src="https://fused-image-assets.s3.amazonaws.com/3e8f82d3-9566-400a-8488-b1725ddc7348/thumbnail" width="600" alt="UDF preview image"></p>
+<p align="center"><img src="https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hex5_visualize_CDL_crop.png" width="600" alt="UDF preview image"></p>
 
 <!--fused:tags-->
 Tags: `pydeck` `map` `h3` `cdl`
