@@ -129,17 +129,12 @@ if query:
         longitude = -98.5795,
         zoom = 3  # This gives a good view of the continental US
     )
-    
-    # hex_df = fused.run(
-    #     "UDF_Hex5_visualize_CDL_crop", 
-    #     vals=[selected_crop_id],
-    #     year=2024,
-    # )
+
+    # NOTE: We could do filtering in the UDF query, but doing it in streamlit instead to make app more reactive
     hex_df = fused.run(
-        "CDL_from_source_coop",
+        "UDF_CDL_from_source_coop",
         crop_value_list = [selected_crop_id],
-        cell_to_parent_res= 5, # Change this to display at a higher resolution
-        # year = 2024, # Change to any supported year on Source Coop
+        cell_to_parent_res= 5, # Change this to display at a higher resolution (but slower app)
         year = year
     )
     
