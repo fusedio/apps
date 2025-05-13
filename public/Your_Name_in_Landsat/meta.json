@@ -60,11 +60,11 @@
             "fused:tags": [
               {
                 "id": "fun",
-                "label": "fun",
-                "isCreatable": true
+                "label": "fun"
               }
             ],
-            "fused:description": "## Overview\n\nThis app demonstrates Rebuild of NASA Webapp using Fused App.\n\n## External links\n\n- [NASA Webapp](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/index.html)"
+            "fused:description": "## Overview\n\nThis app demonstrates Rebuild of NASA Webapp using Fused App.\n\n## External links\n\n- [NASA Webapp](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/index.html)\n",
+            "fused:explorerPin": "5"
           },
           "source": "Your_Name_in_Landsat.py",
           "headers": []
