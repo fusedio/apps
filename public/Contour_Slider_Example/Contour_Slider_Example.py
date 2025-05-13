@@ -1,18 +1,28 @@
 import streamlit as st
-st.markdown('### Contour Slider Example')
+
+st.markdown("### Contour Slider Example")
+
+import micropip
+
+await micropip.install(["h3"])
 
 import streamlit.components.v1 as components
 import fused
+
+
 @fused.udf
-def udf(x0:int=4,y0:int=6,z0:int=4, pivot: int=500): 
+def udf(x0: int = 4, y0: int = 6, z0: int = 4, pivot: int = 500):
     import pandas as pd
     import h3
-    df = fused.run('UDF_DEM_Tile_Hexify', x=x0,y=y0,z=z0)
-    df['lat'] = df['hex'].map(lambda x:h3.api.basic_int.cell_to_latlng(x)[0])
-    df['lng'] = df['hex'].map(lambda x:h3.api.basic_int.cell_to_latlng(x)[1])
-    df=df[['lat','lng','metric']]
+
+    df = fused.run("UDF_DEM_Tile_Hexify", x=x0, y=y0, z=z0)
+    df["lat"] = df["hex"].map(lambda x: h3.api.basic_int.cell_to_latlng(x)[0])
+    df["lng"] = df["hex"].map(lambda x: h3.api.basic_int.cell_to_latlng(x)[1])
+    df = df[["lat", "lng", "metric"]]
     return df
-df = fused.run(udf)
+
+
+df = fused.run(udf, engine="local")
 template = """
 <!DOCTYPE html>
 <html lang="en">
@@ -94,8 +104,9 @@ template = """
     </script>
 </body>
 </html>
-""" 
-html_str = fused.utils.common.html_params(template,data=df.to_json(orient='records'))
+"""
 
-# st.html(html_str) #not working
-components.html(html_str, height=1300, scrolling=True) 
+common = fused.load("https://github.com/fusedio/udfs/tree/99b7990/public/common").utils
+html_str = common.html_params(template, data=df.to_json(orient="records"))
+
+components.html(html_str, height=1300, scrolling=True)
