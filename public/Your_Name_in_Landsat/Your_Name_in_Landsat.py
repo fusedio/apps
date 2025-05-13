@@ -12,6 +12,6 @@ if name.replace(" ", "").isalpha():
             continue
         url = f"https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/public/images/{l}_{random.randint(0, 1)}.jpg"
         # Place the image in the respective column
-        columns[idx].image(url, use_column_width=True)
+        columns[idx].image(url, use_container_width=True)
 else:
     st.info("Please enter only alphabetic characters and spaces.")
