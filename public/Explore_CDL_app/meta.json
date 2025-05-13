@@ -1,0 +1,345 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Explore_CDL_app",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "colors": "Sunset",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "app",
+            "fused:slug": "Explore_CDL_app",
+            "fused:name": "Explore_CDL_app",
+            "fused:id": null,
+            "fused:assetUrl": "fused_uploaded_preview",
+            "fused:tags": [
+              {
+                "id": "pydeck",
+                "label": "pydeck"
+              },
+              {
+                "id": "map",
+                "label": "map"
+              },
+              {
+                "id": "h3",
+                "label": "h3"
+              },
+              {
+                "id": "cdl",
+                "label": "cdl",
+                "isCreatable": true
+              }
+            ],
+            "fused:description": "## Overview\n\nThis Fused App allows you to explore any Crop Data Layer category at hex5 and filter out any hexagons below a minimum threshold",
+            "fused:gitHistory": [
+              {
+                "fused:vizConfig": {
+                  "tileLayer": {
+                    "@@type": "TileLayer",
+                    "minZoom": 0,
+                    "maxZoom": 19,
+                    "tileSize": 256
+                  },
+                  "rasterLayer": {
+                    "@@type": "BitmapLayer",
+                    "pickable": true
+                  },
+                  "vectorLayer": {
+                    "@@type": "GeoJsonLayer",
+                    "stroked": true,
+                    "filled": false,
+                    "pickable": true,
+                    "lineWidthMinPixels": 1,
+                    "pointRadiusMinPixels": 1,
+                    "getLineColor": {
+                      "@@function": "colorContinuous",
+                      "attr": "value",
+                      "domain": [
+                        0,
+                        10
+                      ],
+                      "colors": "Sunset",
+                      "nullColor": [
+                        184,
+                        184,
+                        184
+                      ]
+                    },
+                    "getFillColor": [
+                      208,
+                      208,
+                      208,
+                      40
+                    ]
+                  }
+                },
+                "fused:udfType": "app",
+                "fused:slug": "Hexify_Image_Example",
+                "fused:name": "Hexify_Image_Example",
+                "fused:id": null,
+                "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Hexify_Image_Example/",
+                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Hexify_Image_Example/",
+                "fused:gitPath": "public/Hexify_Image_Example",
+                "fused:gitRef": "58b68a77a3bff1e5afb2614734d2de85680120aa",
+                "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
+                "fused:tags": [
+                  {
+                    "id": "pydeck",
+                    "label": "pydeck"
+                  },
+                  {
+                    "id": "map",
+                    "label": "map"
+                  },
+                  {
+                    "id": "h3",
+                    "label": "h3"
+                  }
+                ],
+                "fused:description": "## Overview\n\nThis app demonstrates how call the \"Hexify Image\" UDF by Jennings Anderson. The H3 resolution and URL of your image are passed as input parameters to the UDF.\n## External links\n\n- [Hexify Image UDF](https://www.fused.io/workbench/catalog/Hexify_Image-b817f7fd-cd52-40d3-a601-d0fcc36d0f86)\n",
+                "fused:gitAuthorNames": [
+                  "Sina Kashuk"
+                ],
+                "fused:gitAuthorUsernames": [
+                  "kashuk"
+                ],
+                "fused:gitAuthorUrls": [
+                  "https://github.com/kashuk"
+                ],
+                "fused:gitAuthorAvatarUrls": [
+                  "https://avatars.githubusercontent.com/u/12432685?v=4"
+                ],
+                "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
+                "fused:explorerTab": "public",
+                "fused:gitRepo": "fusedio/apps",
+                "fused:sharedToken": "UDF_Hexify_Image_Example"
+              },
+              {
+                "fused:vizConfig": {
+                  "tileLayer": {
+                    "@@type": "TileLayer",
+                    "minZoom": 0,
+                    "maxZoom": 19,
+                    "tileSize": 256
+                  },
+                  "rasterLayer": {
+                    "@@type": "BitmapLayer",
+                    "pickable": true
+                  },
+                  "vectorLayer": {
+                    "@@type": "GeoJsonLayer",
+                    "stroked": true,
+                    "filled": false,
+                    "pickable": true,
+                    "lineWidthMinPixels": 1,
+                    "pointRadiusMinPixels": 1,
+                    "getLineColor": {
+                      "@@function": "colorContinuous",
+                      "attr": "value",
+                      "domain": [
+                        0,
+                        10
+                      ],
+                      "colors": "Sunset",
+                      "nullColor": [
+                        184,
+                        184,
+                        184
+                      ]
+                    },
+                    "getFillColor": [
+                      208,
+                      208,
+                      208,
+                      40
+                    ]
+                  }
+                },
+                "fused:udfType": "app",
+                "fused:slug": "CDL_hex_demo",
+                "fused:name": "CDL_hex_demo",
+                "fused:id": null,
+                "fused:gitUrl": "https://github.com/fusedio/apps/tree/0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5/public/CDL_hex_demo/",
+                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/0c257ee/public/CDL_hex_demo/",
+                "fused:gitPath": "public/CDL_hex_demo",
+                "fused:gitRef": "0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5",
+                "fused:assetUrl": "fused_uploaded_preview",
+                "fused:tags": [
+                  {
+                    "id": "pydeck",
+                    "label": "pydeck"
+                  },
+                  {
+                    "id": "map",
+                    "label": "map"
+                  },
+                  {
+                    "id": "h3",
+                    "label": "h3"
+                  },
+                  {
+                    "id": "cdl",
+                    "label": "cdl",
+                    "isCreatable": true
+                  }
+                ],
+                "fused:description": "## Overview\n\nThis Fused App allows you to explore any Crop Data Layer category at hex5 and filter out any hexagons below a minimum threshold",
+                "fused:gitAuthorNames": [
+                  "Sina Kashuk"
+                ],
+                "fused:gitAuthorUsernames": [
+                  "kashuk"
+                ],
+                "fused:gitAuthorUrls": [
+                  "https://github.com/kashuk"
+                ],
+                "fused:gitAuthorAvatarUrls": [
+                  "https://avatars.githubusercontent.com/u/12432685?v=4"
+                ],
+                "fused:gitLastModified": "2025-04-27T02:04:31.447Z",
+                "fused:explorerTab": "public",
+                "fused:gitRepo": "fusedio/apps",
+                "fused:sharedToken": "UDF_Hexify_Image_Example",
+                "fused:gitHistory": [
+                  {
+                    "fused:vizConfig": {
+                      "tileLayer": {
+                        "@@type": "TileLayer",
+                        "minZoom": 0,
+                        "maxZoom": 19,
+                        "tileSize": 256
+                      },
+                      "rasterLayer": {
+                        "@@type": "BitmapLayer",
+                        "pickable": true
+                      },
+                      "vectorLayer": {
+                        "@@type": "GeoJsonLayer",
+                        "stroked": true,
+                        "filled": false,
+                        "pickable": true,
+                        "lineWidthMinPixels": 1,
+                        "pointRadiusMinPixels": 1,
+                        "getLineColor": {
+                          "@@function": "colorContinuous",
+                          "attr": "value",
+                          "domain": [
+                            0,
+                            10
+                          ],
+                          "colors": "Sunset",
+                          "nullColor": [
+                            184,
+                            184,
+                            184
+                          ]
+                        },
+                        "getFillColor": [
+                          208,
+                          208,
+                          208,
+                          40
+                        ]
+                      }
+                    },
+                    "fused:udfType": "app",
+                    "fused:slug": "Hexify_Image_Example",
+                    "fused:name": "Hexify_Image_Example",
+                    "fused:id": null,
+                    "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Hexify_Image_Example/",
+                    "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Hexify_Image_Example/",
+                    "fused:gitPath": "public/Hexify_Image_Example",
+                    "fused:gitRef": "58b68a77a3bff1e5afb2614734d2de85680120aa",
+                    "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
+                    "fused:tags": [
+                      {
+                        "id": "pydeck",
+                        "label": "pydeck"
+                      },
+                      {
+                        "id": "map",
+                        "label": "map"
+                      },
+                      {
+                        "id": "h3",
+                        "label": "h3"
+                      }
+                    ],
+                    "fused:description": "## Overview\n\nThis app demonstrates how call the \"Hexify Image\" UDF by Jennings Anderson. The H3 resolution and URL of your image are passed as input parameters to the UDF.\n## External links\n\n- [Hexify Image UDF](https://www.fused.io/workbench/catalog/Hexify_Image-b817f7fd-cd52-40d3-a601-d0fcc36d0f86)\n",
+                    "fused:gitAuthorNames": [
+                      "Sina Kashuk"
+                    ],
+                    "fused:gitAuthorUsernames": [
+                      "kashuk"
+                    ],
+                    "fused:gitAuthorUrls": [
+                      "https://github.com/kashuk"
+                    ],
+                    "fused:gitAuthorAvatarUrls": [
+                      "https://avatars.githubusercontent.com/u/12432685?v=4"
+                    ],
+                    "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
+                    "fused:explorerTab": "public",
+                    "fused:gitRepo": "fusedio/apps",
+                    "fused:sharedToken": "UDF_Hexify_Image_Example"
+                  }
+                ],
+                "fused:gitPullRequestBranch": "max-patch-dbc661-Adding-all-years-we-ingested",
+                "fused:gitPullRequestLink": "https://github.com/fusedio/apps/pull/23"
+              }
+            ]
+          },
+          "source": "Explore_CDL_app.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
