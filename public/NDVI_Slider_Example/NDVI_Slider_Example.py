@@ -7,6 +7,9 @@ import folium
 from streamlit_folium import st_folium
 from folium.plugins import SideBySideLayers
 
+st.title("True Color / NDVI Slider comparison")
+st.write("Compare a high resolution True Color visualization to its NDVI ([Normalized Difference Vegetation Index](https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index))")
+
 m = folium.Map(height=700,
               location=[37.803972, -122.421297],
             zoom_start=17,
@@ -25,3 +28,4 @@ sbs.add_to(m)
 
 st_folium(m, height=700, key="map3", use_container_width=True)
 
+st.write("Images from [NAIP](https://naip-usdaonline.hub.arcgis.com/)")

@@ -1,4 +1,3 @@
-<!--fused:pin=3-->
 <!--fused:preview-->
 <p align="center"><img src="https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/NDVI_Slider_Example.png" width="600" alt="UDF preview image"></p>
 
