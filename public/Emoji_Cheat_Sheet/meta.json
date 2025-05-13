@@ -60,11 +60,10 @@
             "fused:tags": [
               {
                 "id": "cheatsheet",
-                "label": "cheatsheet",
-                "isCreatable": true
+                "label": "cheatsheet"
               }
             ],
-            "fused:description": "## Overview\n\nThis is Emoji Cheat Sheet for use in Fused App Builder. \n\n## External links\n- [Reference](https://github.com/streamlit/emoji-shortcodes/blob/master/streamlit_app.py) by [Siavash Yasini](https://github.com/syasini)"
+            "fused:description": "## Overview\n\nThis is Emoji Cheat Sheet for use in Fused App Builder. \n\n## External links\n- [Reference](https://github.com/streamlit/emoji-shortcodes/blob/master/streamlit_app.py) by [Siavash Yasini](https://github.com/syasini)\n"
           },
           "source": "Emoji_Cheat_Sheet.py",
           "headers": []
