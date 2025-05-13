@@ -60,8 +60,7 @@
             "fused:tags": [
               {
                 "id": "d3",
-                "label": "d3",
-                "isCreatable": true
+                "label": "d3"
               },
               {
                 "id": "html",
@@ -69,16 +68,14 @@
               },
               {
                 "id": "crosssfilter",
-                "label": "crosssfilter",
-                "isCreatable": true
+                "label": "crosssfilter"
               },
               {
                 "id": "udf",
-                "label": "udf",
-                "isCreatable": true
+                "label": "udf"
               }
             ],
-            "fused:description": "## Overview\n\nThis app showcases how to use D3 to create contour with slider and render via HTML in Fused App.\n\n## External links\n\n- [Observable Plot](https://observablehq.com/plot/marks/contour)"
+            "fused:description": "## Overview\n\nThis app showcases how to use D3 to create contour with slider and render via HTML in Fused App.\n\n## External links\n\n- [Observable Plot](https://observablehq.com/plot/marks/contour)\n"
           },
           "source": "Contour_Slider_Example.py",
           "headers": []
