@@ -193,10 +193,10 @@ if query:
     ))
     
     # Create interactive histogram
-    fig = px.histogram(hex_df, x='area', nbins=50)
+    fig = px.histogram(hex_df, x='pct', nbins=100)
     fig.update_layout(
-        title="Distribution of Area Values per hexagon",
-        xaxis_title="Area",
+        title="Distribution of Percentage of layer per hexagon",
+        xaxis_title="Percentage",
         yaxis_title="Count"
     )
     st.plotly_chart(fig)

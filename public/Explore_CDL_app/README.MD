@@ -1,4 +1,3 @@
-<!--fused:pin=1-->
 <!--fused:preview-->
 <p align="center"><img src="https://fused-image-assets.s3.amazonaws.com/a264447f-3e9e-4c0f-b5fb-53a2d991d5d5/thumbnail" width="600" alt="UDF preview image"></p>
 
