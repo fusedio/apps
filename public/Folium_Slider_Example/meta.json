@@ -12,29 +12,6 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "fused:description": "## Overview\n\nThis app showcases a Folium-based interactive slider for side-by-side comparison of geospatial layers, enabling dynamic exploration and analysis of overlaid maps.\n\n## External links\n\n- [Foluim Docs](https://python-visualization.github.io/folium/latest/getting_started.html)\n",
-            "fused:tags": [
-              {
-                "id": "folium",
-                "label": "folium",
-                "isCreatable": true
-              },
-              {
-                "id": "map",
-                "label": "map",
-                "isCreatable": true
-              },
-              {
-                "id": "slider",
-                "label": "slider",
-                "isCreatable": true
-              },
-              {
-                "id": "raster",
-                "label": "raster"
-              }
-            ],
-            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Folium_Slider_Example.png",
             "fused:vizConfig": {
               "tileLayer": {
                 "@@type": "TileLayer",
@@ -78,7 +55,27 @@
             "fused:udfType": "app",
             "fused:slug": "Folium_Slider_Example",
             "fused:name": "Folium_Slider_Example",
-            "fused:id": null
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Folium_Slider_Example.png",
+            "fused:tags": [
+              {
+                "id": "folium",
+                "label": "folium"
+              },
+              {
+                "id": "map",
+                "label": "map"
+              },
+              {
+                "id": "slider",
+                "label": "slider"
+              },
+              {
+                "id": "raster",
+                "label": "raster"
+              }
+            ],
+            "fused:description": "## Overview\n\nThis app showcases a Folium-based interactive slider for side-by-side comparison of geospatial layers, enabling dynamic exploration and analysis of overlaid maps.\n\n## External links\n\n- [Foluim Docs](https://python-visualization.github.io/folium/latest/getting_started.html)\n"
           },
           "source": "Folium_Slider_Example.py",
           "headers": []
