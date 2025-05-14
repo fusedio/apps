@@ -17,4 +17,4 @@ Explore the [Catalog](https://www.fused.io/workbench/apps/catalog?tab=public) of
 - Save & organize your Apps
 - Share your Fused Apps to anyone in 2 clicks
 
-![Sharing Fused Apps](https://fused-magic.s3.us-west-2.amazonaws.com/docs_assets/github_app_repo/Sharing_Fused_app.gif)
+![Sharing Fused Apps](https://fused-magic.s3.us-west-2.amazonaws.com/docs_assets/github_app_repo/Sharing_Fused_app.gif?raw=true)
