@@ -1,7 +1,9 @@
 import streamlit as st
 from PIL import Image, ImageEnhance, ImageOps, ImageFilter
+import urllib.request
+from io import BytesIO
 
-st.title("Color Scheme Selector for Image Processing")
+st.title("Simple Image Processing")
 
 # Define some cool color schemes
 color_schemes = {
@@ -12,13 +14,28 @@ color_schemes = {
     "Purple": ("black", "purple")
 }
 
-# Capture webcam input
-img_file_buffer = st.camera_input("Take a picture")
+# Setup for default image
+default_image_url = "https://fused-magic.s3.us-west-2.amazonaws.com/docs_assets/github_app_repo/Fused_team.png"
 
-if img_file_buffer is not None:
-    # Load the image
-    image = Image.open(img_file_buffer)
-    
+# Image upload with drag & drop
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"], accept_multiple_files=False)
+
+# Load image
+if uploaded_file is not None:
+    # User uploaded an image
+    image = Image.open(uploaded_file)
+else:
+    # Use default image
+    try:
+        response = urllib.request.urlopen(default_image_url)
+        image = Image.open(BytesIO(response.read()))
+        st.info("Using default image. Upload your own to get started!")
+    except:
+        st.error("Failed to load default image. Please upload an image.")
+        image = None
+
+# Process the image
+if image is not None:
     # Convert the image to grayscale (black and white)
     bw_image = image.convert("L")
     selected_scheme = st.selectbox("Choose a color scheme", list(color_schemes.keys()))
@@ -71,4 +88,4 @@ if img_file_buffer is not None:
         colored_image = colored_image.filter(ImageFilter.SMOOTH)
     
     # Display the processed image
-    st.image(colored_image, caption=f"{selected_scheme} Image", use_column_width=True)
+    st.image(colored_image, caption=f"{selected_scheme} Image", use_container_width=True)
