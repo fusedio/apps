@@ -1,3 +1,4 @@
+<!--fused:pin=4-->
 <!--fused:preview-->
 <p align="center"><img src="https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Streamlit_Cheat_Sheet.png" width="600" alt="UDF preview image"></p>
 
