@@ -1,5 +1,6 @@
 import streamlit as st
-st.markdown("### Choropleth Map Example")
+st.markdown("### Choropleth Map Example: Unemployement Rate in US")
+st.write("County-level unemployement rate in the US (as per 2009)")
 
 import micropip
 await micropip.install('vega_datasets')
@@ -20,3 +21,5 @@ chart = alt.Chart(counties).mark_geoshape().encode(
     height=300
 )
 chart
+
+st.write("Data taken from [vega-datasets](https://vega.github.io/vega-datasets/datapackage.html#path-61)")
