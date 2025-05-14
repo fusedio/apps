@@ -60,16 +60,14 @@
             "fused:tags": [
               {
                 "id": "form",
-                "label": "form",
-                "isCreatable": true
+                "label": "form"
               },
               {
                 "id": "udf",
-                "label": "udf",
-                "isCreatable": true
+                "label": "udf"
               }
             ],
-            "fused:description": "## Overview\n\nThis app showcases how to generated IAM policy for your s3 bucket using Fuesed App.\n\n## External links\n\n- [Fused Data Ingestion Doc](https://docs.fused.io/core-concepts/data_ingestion/ingestion-your-data/)"
+            "fused:description": "## Overview\n\nThis app showcases how to generated IAM policy for your s3 bucket using Fuesed App.\n\n## External links\n\n- [Fused Data Ingestion Doc](https://docs.fused.io/core-concepts/data_ingestion/ingestion-your-data/)\n"
           },
           "source": "S3_IAMpolicy_Form.py",
           "headers": []
