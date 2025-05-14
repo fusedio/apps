@@ -12,25 +12,6 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "fused:description": "## Overview\n\nThis App showcases a Choropleth Map example that can be created with Altair using Fused App.\n\n## External links\n\n- [Altair Reference](https://altair-viz.github.io/gallery/choropleth.html)\n",
-            "fused:tags": [
-              {
-                "id": "altair",
-                "label": "altair",
-                "isCreatable": true
-              },
-              {
-                "id": "map",
-                "label": "map",
-                "isCreatable": true
-              },
-              {
-                "id": "choropleth",
-                "label": "choropleth",
-                "isCreatable": true
-              }
-            ],
-            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Choropleth_Map_Example.png",
             "fused:vizConfig": {
               "tileLayer": {
                 "@@type": "TileLayer",
@@ -74,7 +55,23 @@
             "fused:udfType": "app",
             "fused:slug": "Choropleth_Map_Example",
             "fused:name": "Choropleth_Map_Example",
-            "fused:id": null
+            "fused:id": null,
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Choropleth_Map_Example.png",
+            "fused:tags": [
+              {
+                "id": "altair",
+                "label": "altair"
+              },
+              {
+                "id": "map",
+                "label": "map"
+              },
+              {
+                "id": "choropleth",
+                "label": "choropleth"
+              }
+            ],
+            "fused:description": "## Overview\n\nThis App showcases a Choropleth Map example that can be created with Altair using Fused App.\n\n## External links\n\n- [Altair Reference](https://altair-viz.github.io/gallery/choropleth.html)\n"
           },
           "source": "Choropleth_Map_Example.py",
           "headers": []
