@@ -2,13 +2,14 @@ import streamlit as st
 import time # This should be on top if you want the spinner to happen
 import fused
 st.title("Install a Package")
+st.write("Create Python environments & add packages to existing environments to use in your Fused UDFs.")
 is_loggedin=False
 try:
     name = fused.api.whoami()['name']
     st.success(f'You are successfully logged in as {name}.')
     is_loggedin=True
 except:
-    st.error('You are currently not logged in to Fused.')
+    st.error("You are currently not logged in to Fused. [Login](https://www.fused.io/api/auth/login?returnTo=%2Fworkbench%2Fapps) to access this Fused App")
 
 if 'button1' not in st.session_state:
     st.session_state.button1 = True
