@@ -12,6 +12,7 @@ st.write(
     Data taken from the Fused-partitioned dataset hosted on [Source Coop](https://source.coop/repositories/fused/hex/description).
     """)
 
+ca = fused.load("https://github.com/fusedio/udfs/tree/63c7e19/public/common_app/")
 
 await micropip.install(['pydeck', 'plotly', 'scikit-learn', 'transformers_js_py'])
 import pydeck as pdk
@@ -90,9 +91,13 @@ year = st.selectbox(
     index=6  # Index 6 corresponds to 2024 (7th element in the range)
 )
 
-query = st.text_input("🔍 Search for CDL Layer (Using a [light-weight LLM model](https://github.com/whitphx/transformers.js.py) running in your browser to find the closest [CDL crop](https://storage.googleapis.com/earthengine-stac/catalog/USDA/USDA_NASS_CDL.json)):", "Open Water")
+query = st.text_input("🔍 AI Search for CDL Layer (Using a [light-weight LLM model](https://github.com/whitphx/transformers.js.py) running in your browser to find the closest [CDL crop](https://storage.googleapis.com/earthengine-stac/catalog/USDA/USDA_NASS_CDL.json)):", "Open Water")
 
+# PLaying around with the async demo
+st_status = st.empty()
+await ca.async_status("Starting...", st_status=st_status)
 if query:
+    await ca.async_status("sentence_embeddings...", "Done: sentence_embeddings", st_status)
     with st.spinner("Finding similar layer..."):
         sorted_indices, similarities = await process_query(
             query, 
@@ -103,7 +108,10 @@ if query:
     
     # Get crop IDs and descriptions for top matches
     top_matches = []
-    for i, idx in enumerate(sorted_indices[:5]):
+    for i, idx in enumerate(
+        # sorted_indices[:5] # Only showing top 5 
+        sorted_indices
+    ):
         crop_description = st.session_state.crop_descriptions[idx]
         # Find the crop ID by description
         crop_id = [k for k, v in cdl_categories.items() if v == crop_description][0]
@@ -122,7 +130,7 @@ if query:
     selected_crop = [v for k, v in cdl_categories.items() if k == selected_crop_id][0]
     
     # Continue with visualization
-    min_ratio_in_hex = st.slider("Minimum ratio to keep", min_value=0.0, max_value=1.0, value=0.05, step=0.05)
+    min_ratio_in_hex = st.slider("Minimum % to keep", min_value=0, max_value=100, value=5, step=1)
     
     view_state = pdk.ViewState(
         latitude = 39.8283,
@@ -131,6 +139,7 @@ if query:
     )
 
     # NOTE: We could do filtering in the UDF query, but doing it in streamlit instead to make app more reactive
+    await ca.async_status("loading data...", "Done: loading data from Fused", st_status)
     hex_df = fused.run(
         "UDF_CDL_from_source_coop",
         crop_value_list = [selected_crop_id],
@@ -142,7 +151,7 @@ if query:
     hex_df['hex']=hex_df['hex'].map(lambda x:hex(x)[2:])
     
     # Filtering out any values below selected ratio
-    hex_df = hex_df[hex_df['pct'] > min_ratio_in_hex*100]
+    hex_df = hex_df[hex_df['pct'] > min_ratio_in_hex]
     
     # Dynamic colors
     min_val = hex_df['area'].min()
@@ -191,12 +200,17 @@ if query:
         initial_view_state=view_state,
         tooltip=tooltip
     ))
+
+    area_measurement = round(
+        # area in sqrt(m) * meter_to_acre / 1 million
+        hex_df['area'].sum() * 0.000247105 / 1_000_000
+        , 2) 
     
     # Create interactive histogram
-    fig = px.histogram(hex_df, x='pct', nbins=100)
+    fig = px.histogram(hex_df, x='area', nbins=100)
     fig.update_layout(
-        title="Distribution of Percentage of layer per hexagon",
-        xaxis_title="Percentage",
+        title=f"Distribution of Area of layer per hexagon (Sum of Area: {area_measurement}M acres)",
+        xaxis_title="Area (m2)",
         yaxis_title="Count"
     )
     st.plotly_chart(fig)
