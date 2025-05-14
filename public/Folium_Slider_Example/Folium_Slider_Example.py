@@ -7,7 +7,7 @@ import folium
 from streamlit_folium import st_folium
 
 st.title("Sentinel 2: Land Use Land Cover / NDVI Slider comparison")
-st.write("Compare Sentinel 2 imagery processed as a LULC (Land Use Land Cover) map to its NDVI ([Normalized Difference Vegetation Index](https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index))")
+st.write("Compare Sentinel 2 imagery processed as a LULC ([Land Use Land Cover](https://www.earthdata.nasa.gov/topics/land-surface/land-use-land-cover)) map to its NDVI ([Normalized Difference Vegetation Index](https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index))")
 
 # Create map
 lat, lng = 39.62155304762678, -90.78627106190022
