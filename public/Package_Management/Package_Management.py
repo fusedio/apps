@@ -6,7 +6,6 @@ st.write("Create Python environments & add packages to existing environments to 
 is_loggedin=False
 try:
     name = fused.api.whoami()['name']
-    assert name == 'test'
     st.success(f'You are successfully logged in as {name}.')
     is_loggedin=True
 except:
