@@ -60,13 +60,11 @@
             "fused:tags": [
               {
                 "id": "video",
-                "label": "video",
-                "isCreatable": true
+                "label": "video"
               },
               {
                 "id": "cv",
-                "label": "cv",
-                "isCreatable": true
+                "label": "cv"
               }
             ],
             "fused:description": "## Overview\n\nThis app demonstrates how use color scheme selector for image processing\nusing in Fused App.\n"
