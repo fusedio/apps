@@ -56,27 +56,6 @@
             "fused:slug": "Explore_CDL_app",
             "fused:name": "Explore_CDL_app",
             "fused:id": null,
-            "fused:assetUrl": "fused_uploaded_preview",
-            "fused:tags": [
-              {
-                "id": "pydeck",
-                "label": "pydeck"
-              },
-              {
-                "id": "map",
-                "label": "map"
-              },
-              {
-                "id": "h3",
-                "label": "h3"
-              },
-              {
-                "id": "cdl",
-                "label": "cdl",
-                "isCreatable": true
-              }
-            ],
-            "fused:description": "## Overview\n\nThis Fused App allows you to explore any Crop Data Layer category from data hosted on [Source Cooperative](https://source.coop/fused/hex/release_2025_04_beta/cdl), repartitioned by Fused",
             "fused:gitHistory": [
               {
                 "fused:vizConfig": {
@@ -678,7 +657,27 @@
                 "fused:gitPullRequestBranch": "max-patch-c5394d-Updating-UDF-link-to-use-public-U",
                 "fused:gitPullRequestLink": "https://github.com/fusedio/apps/pull/28"
               }
-            ]
+            ],
+            "fused:assetUrl": "fused_uploaded_preview",
+            "fused:tags": [
+              {
+                "id": "pydeck",
+                "label": "pydeck"
+              },
+              {
+                "id": "map",
+                "label": "map"
+              },
+              {
+                "id": "h3",
+                "label": "h3"
+              },
+              {
+                "id": "cdl",
+                "label": "cdl"
+              }
+            ],
+            "fused:description": "## Overview\n\nThis Fused App allows you to explore any Crop Data Layer category from data hosted on [Source Cooperative](https://source.coop/fused/hex/release_2025_04_beta/cdl), repartitioned by Fused\n"
           },
           "source": "Explore_CDL_app.py",
           "headers": []
