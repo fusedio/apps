@@ -56,7 +56,8 @@
             "fused:udfType": "app",
             "fused:slug": "CDL_Explorer_Stats_App",
             "fused:name": "CDL_Explorer_Stats_App",
-            "fused:id": null
+            "fused:id": null,
+            "fused:description": "Exported from Fused UDF Workbench\n\n"
           },
           "source": "CDL_Explorer_Stats_App.py",
           "headers": []
