@@ -5,13 +5,15 @@ import micropip
 import requests
 import numpy as np
 
-st.title("Crop Data Layer Explorer & Time Series Analysis")
+st.title("📊 Crop Data Time Series Analysis")
 st.write(
     """
     Search, visualize, and analyze trends for any crop from the USDA's Crop Data Layer dataset.
     Data from the Fused-partitioned dataset hosted on [Source Coop](https://source.coop/repositories/fused/hex/description).
     """
 )
+
+ca = fused.load("https://github.com/fusedio/udfs/tree/63c7e19/public/common_app/")
 
 # Load dependencies
 await micropip.install(['plotly', 'scikit-learn', 'transformers_js_py'])
@@ -115,6 +117,9 @@ with st.sidebar:
     cell_to_parent_res = st.slider("Resolution (H3 Level)", min_value=4, max_value=8, value=6)
     min_ratio_stats = st.slider("Minimum ratio for statistics", min_value=0.0, max_value=0.5, value=0.0, step=0.01)
 
+# PLaying around with the async demo
+st_status = st.empty()
+await ca.async_status("Starting...", st_status=st_status)
 if query:
     with st.spinner("Finding similar layer..."):
         sorted_indices, similarities = await process_query(
@@ -176,6 +181,7 @@ if query:
     
     with tabs[1]:
         # Load state-level time series data
+        await ca.async_status("Loading level...", "Done: Loaded Data", st_status)
         state_data = load_crop_data(selected_crop_id, cell_to_parent_res, min_ratio_stats, "state")
         
         if state_data is None or len(state_data) == 0:
@@ -260,6 +266,7 @@ if query:
     
     with tabs[2]:
         # Load county-level time series data
+        await ca.async_status("Loading County level...", "Done: Loaded County Data", st_status)
         county_data = load_crop_data(selected_crop_id, cell_to_parent_res, min_ratio_stats, "county")
         
         if county_data is None or len(county_data) == 0:
@@ -378,7 +385,8 @@ if query:
                 labels={name_col: 'State', area_col: 'Area (sq meters)'}
             )
             state_bar.update_layout(xaxis={'categoryorder': 'total descending'})
-            
+
+            await ca.async_status("Plotting data...", "Done: plotting data", st_status)
             st.plotly_chart(state_bar, use_container_width=True)
             
             # Percentage bar chart if available
