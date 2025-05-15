@@ -5,7 +5,7 @@ import micropip
 import requests
 import numpy as np
 
-st.title("Crop Data Layer Hex Explorer!")
+st.title("🌽 Crop Data Explorer!")
 st.write(
     """
     Search and Visualize any crop from the USDA's Crop Data Layer dataset.
@@ -138,7 +138,6 @@ if query:
         zoom = 3  # This gives a good view of the continental US
     )
 
-    # NOTE: We could do filtering in the UDF query, but doing it in streamlit instead to make app more reactive
     await ca.async_status("loading data...", "Done: loading data from Fused", st_status)
     hex_df = fused.run(
         "UDF_CDL_from_source_coop",
