@@ -8,7 +8,7 @@
         "type": "udf",
         "udf": {
           "type": "geopandas_v2",
-          "name": "Explore_CDL_app",
+          "name": "Crop_data_explorer",
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
@@ -679,7 +679,7 @@
             ],
             "fused:description": "## Overview\n\nThis Fused App allows you to explore any Crop Data Layer category from data hosted on [Source Cooperative](https://source.coop/fused/hex/release_2025_04_beta/cdl), repartitioned by Fused\n"
           },
-          "source": "Explore_CDL_app.py",
+          "source": "Crop_data_explorer.py",
           "headers": []
         }
       }
