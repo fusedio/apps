@@ -1,3 +1,4 @@
+<!--fused:pin=5-->
 <!--fused:preview-->
 <p align="center"><img src="https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Selection_Histogram_Example.png" width="600" alt="UDF preview image"></p>
 
