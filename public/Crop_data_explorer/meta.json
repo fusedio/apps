@@ -8,7 +8,7 @@
         "type": "udf",
         "udf": {
           "type": "geopandas_v2",
-          "name": "Explore_CDL_app",
+          "name": "Crop_data_explorer",
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
