@@ -53,8 +53,8 @@
               }
             },
             "fused:udfType": "app",
-            "fused:slug": "Explore_CDL_app",
-            "fused:name": "Explore_CDL_app",
+            "fused:slug": "Crop_data_explorer",
+            "fused:name": "Crop_data_explorer",
             "fused:id": null,
             "fused:gitHistory": [
               {
@@ -99,12 +99,12 @@
                   }
                 },
                 "fused:udfType": "app",
-                "fused:slug": "Hexify_Image_Example",
-                "fused:name": "Hexify_Image_Example",
+                "fused:slug": "Crop_data_explorer",
+                "fused:name": "Crop_data_explorer",
                 "fused:id": null,
-                "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Hexify_Image_Example/",
-                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Hexify_Image_Example/",
-                "fused:gitPath": "public/Hexify_Image_Example",
+                "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Crop_data_explorer/",
+                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Crop_data_explorer/",
+                "fused:gitPath": "public/Crop_data_explorer",
                 "fused:gitRef": "58b68a77a3bff1e5afb2614734d2de85680120aa",
                 "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
                 "fused:tags": [
@@ -137,7 +137,7 @@
                 "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
                 "fused:explorerTab": "public",
                 "fused:gitRepo": "fusedio/apps",
-                "fused:sharedToken": "UDF_Hexify_Image_Example"
+                "fused:sharedToken": "UDF_Crop_data_explorer"
               },
               {
                 "fused:vizConfig": {
@@ -181,12 +181,12 @@
                   }
                 },
                 "fused:udfType": "app",
-                "fused:slug": "CDL_hex_demo",
-                "fused:name": "CDL_hex_demo",
+                "fused:slug": "Crop_data_explorer",
+                "fused:name": "Crop_data_explorer",
                 "fused:id": null,
-                "fused:gitUrl": "https://github.com/fusedio/apps/tree/0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5/public/CDL_hex_demo/",
-                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/0c257ee/public/CDL_hex_demo/",
-                "fused:gitPath": "public/CDL_hex_demo",
+                "fused:gitUrl": "https://github.com/fusedio/apps/tree/0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5/public/Crop_data_explorer/",
+                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/0c257ee/public/Crop_data_explorer/",
+                "fused:gitPath": "public/Crop_data_explorer",
                 "fused:gitRef": "0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5",
                 "fused:assetUrl": "fused_uploaded_preview",
                 "fused:tags": [
@@ -224,7 +224,7 @@
                 "fused:gitLastModified": "2025-04-27T02:04:31.447Z",
                 "fused:explorerTab": "public",
                 "fused:gitRepo": "fusedio/apps",
-                "fused:sharedToken": "UDF_Hexify_Image_Example",
+                "fused:sharedToken": "UDF_Crop_data_explorer",
                 "fused:gitHistory": [
                   {
                     "fused:vizConfig": {
@@ -268,14 +268,14 @@
                       }
                     },
                     "fused:udfType": "app",
-                    "fused:slug": "Hexify_Image_Example",
-                    "fused:name": "Hexify_Image_Example",
+                    "fused:slug": "Crop_data_explorer",
+                    "fused:name": "Crop_data_explorer",
                     "fused:id": null,
-                    "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Hexify_Image_Example/",
-                    "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Hexify_Image_Example/",
-                    "fused:gitPath": "public/Hexify_Image_Example",
+                    "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Crop_data_explorer/",
+                    "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Crop_data_explorer/",
+                    "fused:gitPath": "public/Crop_data_explorer",
                     "fused:gitRef": "58b68a77a3bff1e5afb2614734d2de85680120aa",
-                    "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
+                    "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Crop_data_explorer.png",
                     "fused:tags": [
                       {
                         "id": "pydeck",
@@ -306,7 +306,7 @@
                     "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
                     "fused:explorerTab": "public",
                     "fused:gitRepo": "fusedio/apps",
-                    "fused:sharedToken": "UDF_Hexify_Image_Example"
+                    "fused:sharedToken": "UDF_Crop_data_explorer"
                   }
                 ],
                 "fused:gitPullRequestBranch": "max-patch-dbc661-Adding-all-years-we-ingested",
@@ -354,12 +354,12 @@
                   }
                 },
                 "fused:udfType": "app",
-                "fused:slug": "CDL_hex5_visualize",
-                "fused:name": "CDL_hex5_visualize",
+                "fused:slug": "Crop_data_explorer",
+                "fused:name": "Crop_data_explorer",
                 "fused:id": null,
-                "fused:gitUrl": "https://github.com/fusedio/apps/tree/de1c348aeb08533b496ad4bcc58345f004cb3017/public/CDL_hex5_visualize/",
-                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/de1c348/public/CDL_hex5_visualize/",
-                "fused:gitPath": "public/CDL_hex5_visualize",
+                "fused:gitUrl": "https://github.com/fusedio/apps/tree/de1c348aeb08533b496ad4bcc58345f004cb3017/public/Crop_data_explorer/",
+                "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/de1c348/public/Crop_data_explorer/",
+                "fused:gitPath": "public/Crop_data_explorer",
                 "fused:gitRef": "de1c348aeb08533b496ad4bcc58345f004cb3017",
                 "fused:assetUrl": "fused_uploaded_preview",
                 "fused:tags": [
@@ -440,14 +440,14 @@
                       }
                     },
                     "fused:udfType": "app",
-                    "fused:slug": "Hexify_Image_Example",
-                    "fused:name": "Hexify_Image_Example",
+                    "fused:slug": "Crop_data_explorer",
+                    "fused:name": "Crop_data_explorer",
                     "fused:id": null,
-                    "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Hexify_Image_Example/",
-                    "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Hexify_Image_Example/",
-                    "fused:gitPath": "public/Hexify_Image_Example",
+                    "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Crop_data_explorer/",
+                    "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Crop_data_explorer/",
+                    "fused:gitPath": "public/Crop_data_explorer",
                     "fused:gitRef": "58b68a77a3bff1e5afb2614734d2de85680120aa",
-                    "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
+                    "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Crop_data_explorer.png",
                     "fused:tags": [
                       {
                         "id": "pydeck",
@@ -478,7 +478,7 @@
                     "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
                     "fused:explorerTab": "public",
                     "fused:gitRepo": "fusedio/apps",
-                    "fused:sharedToken": "UDF_Hexify_Image_Example"
+                    "fused:sharedToken": "UDF_Crop_data_explorer"
                   },
                   {
                     "fused:vizConfig": {
@@ -522,12 +522,12 @@
                       }
                     },
                     "fused:udfType": "app",
-                    "fused:slug": "CDL_hex_demo",
-                    "fused:name": "CDL_hex_demo",
+                    "fused:slug": "Crop_data_explorer",
+                    "fused:name": "Crop_data_explorer",
                     "fused:id": null,
-                    "fused:gitUrl": "https://github.com/fusedio/apps/tree/0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5/public/CDL_hex_demo/",
-                    "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/0c257ee/public/CDL_hex_demo/",
-                    "fused:gitPath": "public/CDL_hex_demo",
+                    "fused:gitUrl": "https://github.com/fusedio/apps/tree/0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5/public/Crop_data_explorer/",
+                    "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/0c257ee/public/Crop_data_explorer/",
+                    "fused:gitPath": "public/Crop_data_explorer",
                     "fused:gitRef": "0c257ee86a1fd88a8f1af26ac8c6d579ebeb35e5",
                     "fused:assetUrl": "fused_uploaded_preview",
                     "fused:tags": [
@@ -565,7 +565,7 @@
                     "fused:gitLastModified": "2025-04-27T02:04:31.447Z",
                     "fused:explorerTab": "public",
                     "fused:gitRepo": "fusedio/apps",
-                    "fused:sharedToken": "UDF_Hexify_Image_Example",
+                    "fused:sharedToken": "UDF_Crop_data_explorer",
                     "fused:gitHistory": [
                       {
                         "fused:vizConfig": {
@@ -609,14 +609,14 @@
                           }
                         },
                         "fused:udfType": "app",
-                        "fused:slug": "Hexify_Image_Example",
-                        "fused:name": "Hexify_Image_Example",
+                        "fused:slug": "Crop_data_explorer",
+                        "fused:name": "Crop_data_explorer",
                         "fused:id": null,
-                        "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Hexify_Image_Example/",
-                        "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Hexify_Image_Example/",
-                        "fused:gitPath": "public/Hexify_Image_Example",
+                        "fused:gitUrl": "https://github.com/fusedio/apps/tree/58b68a77a3bff1e5afb2614734d2de85680120aa/public/Crop_data_explorer/",
+                        "fused:gitShortUrl": "https://github.com/fusedio/apps/tree/58b68a7/public/Crop_data_explorer/",
+                        "fused:gitPath": "public/Crop_data_explorer",
                         "fused:gitRef": "58b68a77a3bff1e5afb2614734d2de85680120aa",
-                        "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Hexify_Image_Example.png",
+                        "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/apps-public/Crop_data_explorer.png",
                         "fused:tags": [
                           {
                             "id": "pydeck",
@@ -647,7 +647,7 @@
                         "fused:gitLastModified": "2025-01-27T00:25:20+00:00",
                         "fused:explorerTab": "public",
                         "fused:gitRepo": "fusedio/apps",
-                        "fused:sharedToken": "UDF_Hexify_Image_Example"
+                        "fused:sharedToken": "UDF_Crop_data_explorer"
                       }
                     ],
                     "fused:gitPullRequestBranch": "max-patch-dbc661-Adding-all-years-we-ingested",
