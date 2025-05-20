@@ -71,4 +71,4 @@ if img_file_buffer is not None:
         colored_image = colored_image.filter(ImageFilter.SMOOTH)
     
     # Display the processed image
-    st.image(colored_image, caption=f"{selected_scheme} Image", use_column_width=True)
+    st.image(colored_image, caption=f"{selected_scheme} Image", use_container_width=True)
